@@ -1,3 +1,12 @@
-# Design Patterns
+Design Patterns
+---------------
+Implementation of common design patters in Dart with simple explanation.
 
-This project contains a list of the most important design patterns implemented in Dart.
+### Creational
+* Singleton
+* Factory Method
+* Abstract Factory
+
+### Behavioral
+* Strategy
+* Observer
