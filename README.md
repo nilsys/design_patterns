@@ -10,3 +10,4 @@ Implementation of common design patters in Dart with simple explanation.
 ### Behavioral
 * Strategy
 * Observer
+* Command

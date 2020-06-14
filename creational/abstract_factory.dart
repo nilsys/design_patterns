@@ -2,27 +2,53 @@ library design_patterns;
 
 /// Abstract Factory design pattern
 
-abstract class Food {}
-
-class Spaghetti implements Food {}
-
-class Chicken implements Food {}
-
 abstract class FoodFactory {
-  void eat();
-}
+  Food eatMainDish();
+  Food eatAppetizerDish();
 
-class Home implements FoodFactory {
-  @override
-  void eat() {
-    print("we are eating spaghetti!");
+  factory FoodFactory(bool sleepy) {
+    if (sleepy)
+      return Home();
+    else
+      return Restaurant();
   }
 }
 
-class CoffeeShop implements FoodFactory {
+abstract class Food {
+  void printFood() {
+    print(this.runtimeType);
+  }
+}
+
+class FrenchFries extends Food {}
+
+class Spaghetti extends Food {}
+
+class Chicken extends Food {}
+
+class HotWings extends Food {}
+
+class Home implements FoodFactory {
   @override
-  void eat() {
-    print("we are eating chicken!");
+  Food eatAppetizerDish() {
+    return FrenchFries();
+  }
+
+  @override
+  Food eatMainDish() {
+    return Spaghetti();
+  }
+}
+
+class Restaurant implements FoodFactory {
+  @override
+  Food eatAppetizerDish() {
+    return HotWings();
+  }
+
+  @override
+  Food eatMainDish() {
+    return Chicken();
   }
 }
 
@@ -31,22 +57,8 @@ void main() {
   bool sleepy = false;
   // if you're sleepy so we will return home,
   // otherwise you would be able to go out with me to a restaurant.
-  String destination = sleepy ? "home" : "coffee shop";
-  FoodFactory foodFactory;
-  switch (destination) {
-    case "home":
-      // I will prepare some spaghetti for us to eat.
-      foodFactory = Home();
-      break;
-    case "coffee shop":
-      // we are waiting for the chief to make us some chicken.
-      foodFactory = CoffeeShop();
-      break;
-    default:
-      // there are no other possibilities
-      throw UnsupportedError(
-        "you only have two options which are home or coffee shop",
-      );
-  }
-  foodFactory.eat();
+  FoodFactory foodFactory = FoodFactory(sleepy);
+  // print what did we eat as appetizer dish and main Dish.
+  foodFactory.eatAppetizerDish().printFood();
+  foodFactory.eatMainDish().printFood();
 }
