@@ -2,6 +2,9 @@ library design_patterns;
 
 /// Abstract Factory design pattern
 
+// Abstract Factory is a creational design pattern that lets you produce families
+// of related objects without specifying their concrete classes.
+
 abstract class FoodFactory {
   Food eatMainDish();
   Food eatAppetizerDish();
@@ -53,7 +56,7 @@ class Restaurant implements FoodFactory {
 }
 
 void main() {
-  // are you sleepy?
+  // are you sleepy?!
   bool sleepy = false;
   // if you're sleepy so we will return home,
   // otherwise you would be able to go out with me to a restaurant.

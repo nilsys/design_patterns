@@ -1,6 +1,9 @@
 library design_patterns;
 
-// Strategy design pattern [Composition over Inheritance]
+/// Strategy design pattern [also known as the Policy pattern]
+
+// Strategy is a behavioral design pattern that lets you define a family of algorithms,
+// put each of them into a separate class, and make their objects interchangeable.
 
 class ShoppingCart {
   final List items;
@@ -36,6 +39,7 @@ class PayPall implements PaymentMethod {
 }
 
 void main() {
+  bool userHasPayPallAccount = true;
   PayPall payPall = PayPall();
   CreditCard creditCard = CreditCard();
   // note that you can change the payment algorithm used so easily
@@ -43,7 +47,7 @@ void main() {
   ShoppingCart shoppingCart = ShoppingCart(
     items: [],
     totalPrice: 299.99,
-    paymentMethod: payPall,
+    paymentMethod: userHasPayPallAccount ? payPall : creditCard,
   );
   shoppingCart.processPayment();
 }

@@ -3,7 +3,10 @@ library design_patterns;
 import 'book.dart';
 import 'interfaces.dart';
 
-/// Observer design pattern with a real world example
+/// Observer design pattern
+
+// Observer is a behavioral design pattern that lets you define a subscription mechanism
+// to notify multiple objects about any events that happen to the object they’re observing.
 
 class Member implements Subscriber {
   final int id;

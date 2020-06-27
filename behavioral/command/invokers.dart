@@ -1,4 +1,4 @@
-import 'commands.dart';
+import 'command.dart';
 import 'receivers.dart';
 
 class Invoker {
