@@ -1,8 +1,10 @@
+// Copyright 2020 Ammar Yasser. All rights reserved.
+// Use of this source code is governed by a BSD 2-Clause "Simplified" license
+// that can be found in the LICENSE file.
+
 library design_patterns;
 
 import 'food.dart';
-
-/// Abstract Factory design pattern
 
 // Abstract Factory is a creational design pattern that lets you produce families
 // of related objects without specifying their concrete classes.
@@ -21,24 +23,16 @@ abstract class FoodFactory {
 
 class Home implements FoodFactory {
   @override
-  Food eatAppetizerDish() {
-    return FrenchFries();
-  }
+  Food eatAppetizerDish() => FrenchFries();
 
   @override
-  Food eatMainDish() {
-    return Spaghetti();
-  }
+  Food eatMainDish() => Spaghetti();
 }
 
 class Restaurant implements FoodFactory {
   @override
-  Food eatAppetizerDish() {
-    return HotWings();
-  }
+  Food eatAppetizerDish() => HotWings();
 
   @override
-  Food eatMainDish() {
-    return Chicken();
-  }
+  Food eatMainDish() => Chicken();
 }

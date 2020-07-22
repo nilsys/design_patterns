@@ -7,12 +7,12 @@ void main() {
 
   Pizza pizza1 = Pizza(pizzaBuilder);
   print("pizza1 toppings: ${pizza1.getToppings()}");
-  print("pizza1 size: ${pizza1.getSize()}");
+  print("pizza1 size: ${pizzaBuilder.pizzaSize}");
 
   pizzaBuilder.changePizzaSize(PizzaSize.large);
   pizzaBuilder.setToppings(["Sausage", "Black olives"]);
 
   Pizza pizza2 = pizzaBuilder.build();
   print("pizza2 toppings: ${pizza2.getToppings()}");
-  print("pizza2 size: ${pizza2.getSize()}");
+  print("pizza2 size: ${pizzaBuilder.pizzaSize}");
 }

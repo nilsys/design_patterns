@@ -1,6 +1,8 @@
-library design_patterns;
+// Copyright 2020 Ammar Yasser. All rights reserved.
+// Use of this source code is governed by a BSD 2-Clause "Simplified" license
+// that can be found in the LICENSE file.
 
-/// Singleton design pattern
+library design_patterns;
 
 // Singleton is a creational design pattern that lets you ensure that
 // a class has only one instance, while providing a global access point to this instance.
@@ -28,17 +30,18 @@ class Singleton {
 }
 
 void main() {
+  // four different types of singleton
   Singleton staticSingleton = Singleton.staticSingleton;
   Singleton staticGetterSingleton = Singleton.staticGetterSingleton;
   Singleton lazySingleton = Singleton.lazySingleton;
   Singleton factorySingleton = Singleton();
 
-  // print hash codes for all different singleton ways.
+  // print hash codes for all different singleton types.
   print(staticSingleton.hashCode);
   print(staticGetterSingleton.hashCode);
   print(lazySingleton.hashCode);
   print(factorySingleton.hashCode);
 
   // note that if you tried to print the hash code of two objects
-  // of the same singleton method, they would be the same!
+  // of the same singleton type, they would be the same!
 }

@@ -1,14 +1,14 @@
-library design_patterns;
+// Copyright 2020 Ammar Yasser. All rights reserved.
+// Use of this source code is governed by a BSD 2-Clause "Simplified" license
+// that can be found in the LICENSE file.
 
-/// Factory Method design pattern
+library design_patterns;
 
 // Factory Method is a creational design pattern that provides an interface
 // for creating objects in a superclass, but allows subclasses to alter
 // the type of objects that will be created.
-
-// note that Dart offers a factory constructor by default,
-// therefor you don't need to implement this pattern like the description above
-// you could just use a factory constructor!.
+// Dart offers a factory constructor by default, therefor you don't need to implement
+// this pattern like the description above you could just use a factory constructor!.
 
 abstract class Shape {
   factory Shape(String type) {

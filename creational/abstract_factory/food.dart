@@ -1,7 +1,5 @@
 abstract class Food {
-  void printFood() {
-    print(this.runtimeType);
-  }
+  void printFood() => print(this.runtimeType);
 }
 
 class FrenchFries extends Food {}

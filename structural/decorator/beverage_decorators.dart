@@ -1,6 +1,8 @@
-library design_patterns;
+// Copyright 2020 Ammar Yasser. All rights reserved.
+// Use of this source code is governed by a BSD 2-Clause "Simplified" license
+// that can be found in the LICENSE file.
 
-/// Decorator design pattern
+library design_patterns;
 
 // Decorator is a structural design pattern that lets you attach new behaviors to objects
 // by placing these objects inside special wrapper objects that contain the behaviors.

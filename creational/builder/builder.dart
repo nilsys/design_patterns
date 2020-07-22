@@ -1,14 +1,14 @@
+// Copyright 2020 Ammar Yasser. All rights reserved.
+// Use of this source code is governed by a BSD 2-Clause "Simplified" license
+// that can be found in the LICENSE file.
+
 library design_patterns;
 
-/// Builder design pattern
-
-// Builder s a creational design pattern that lets you separate the
-// construction  of a complex object from its representation.
+// Builder is a creational design pattern that lets you separate the
+// construction of a complex object from its representation.
 // By doing so the same construction process can create different representations.
 
 import 'pizza.dart';
-
-enum PizzaSize { small, medium, large }
 
 class PizzaBuilder {
   PizzaSize _pizzaSize;

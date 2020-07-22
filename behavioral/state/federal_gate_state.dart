@@ -1,8 +1,10 @@
+// Copyright 2020 Ammar Yasser. All rights reserved.
+// Use of this source code is governed by a BSD 2-Clause "Simplified" license
+// that can be found in the LICENSE file.
+
 library design_patterns;
 
 import 'federal_gate.dart';
-
-/// State design pattern
 
 // State is a behavioral design pattern that lets an object alter its behavior
 // when its internal state changes. It appears as if the object changed its class.
